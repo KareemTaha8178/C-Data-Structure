@@ -21,12 +21,18 @@
     <ClCompile Include="Stack.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Dunamic_Stack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_Types_Stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Stack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dynamic_Stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

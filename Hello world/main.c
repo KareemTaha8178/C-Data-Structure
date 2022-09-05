@@ -21,10 +21,28 @@ int main() {
 
 	return_State_t ret;
 	ret = Stack_init(&MyStack_1);
-	if (ret == OK) 
+	if (ret == OK)
 	{
-		puts("Hello here");
+		int k = 1;
+		while (!Stack_full(&MyStack_1))
+		{
+			Stack_Push(&MyStack_1, k++);
+		}
+
+		int siz = Stack_Size(&MyStack_1);
+		printf("%d \n", siz);
+		int top = Stack_Top(&MyStack_1);
+		printf("%d \n", top);
+
+		for(int i = (STACK_MAX_LEN - 1); i >= 0; i--)
+		{
+			printf("Data -> %d  \t   Pointer -> %d \n", MyStack_1.data[i], MyStack_1.Stack_ptr);
+			Stack_Pop(&MyStack_1);
+		}
+		int siz2 = Stack_full(&MyStack_1);
+		printf("%d \n", siz2);
+
 	}
-	else{}
+	else puts("You have a problem with stack initialization");
 	return 0;
 }
