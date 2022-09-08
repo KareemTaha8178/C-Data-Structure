@@ -121,10 +121,9 @@ void Delete_Data_From_End(struct Node** List)
 {
 	struct Node* LastNode = NULL, * Counter = NULL;
 	int len = Get_Lenght(*List), counter = 1;
-	if (len == 0) printf("Linked list is empty!!");
+	if (len == 0 || len == 1) printf("Linked list is empty!! ----> Use Delete from beginning");
 	else
 	{
-		Counter = *List;
 		while (counter != (len - 1))
 		{
 			counter++;
@@ -178,7 +177,7 @@ void Display_Data(struct Node* List)
 	{
 		while(TempNode != NULL)
 		{
-			printf("Node Data -> ", TempNode->NodaData);
+			printf("Node Data ---> %i\n", TempNode->NodaData);
 			TempNode = TempNode->NodeLink;
 		}
 		printf("Done Display of all data");

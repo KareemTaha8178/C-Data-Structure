@@ -17,7 +17,7 @@ typedef long long ll;
 //const double Prox = 1e-7;
 
 Stack_ds_t MyStack_1;
-struct Node Linked_1;
+struct Node *ListHead = NULL;
 
 int main() {
 
@@ -46,8 +46,62 @@ int main() {
 
 	}
 	else puts("You have a problem with stack initialization");*/
-	
+    int UserChoice = 0;
+    int ListLength = 0;
 
+    printf("-> Hello to Single Linked List \n");
+    while (1) {
+        printf("\n");
+        printf("===============================\n");
+        printf("-> 1) Insert_Node_At_Beginning \n");
+        printf("-> 2) Insert_Node_At_End \n");
+        printf("-> 3) Insert_Node_After \n");
+        printf("-> 4) Delete_Node_At_Beginning \n");
+        printf("-> 5) Delete_Node_From_End \n");
+        printf("-> 6) Delete_Node_at_any_position \n");
+        printf("-> 7) Display_All_Nodes \n");
+        printf("-> 8) Get_Length \n");
+        printf("-> 9) Quit from application \n");
+        printf("===============================\n");
 
-	return 0;
+        printf("\n");
+        printf("UserChoice : ");
+        scanf_s("%i", &UserChoice);
+
+        switch (UserChoice) {
+        case 1:
+            Insert_Data_At_Beginning(&ListHead);
+            break;
+        case 2:
+            Insert_Data_At_End(&ListHead);
+            break;
+        case 3:
+            Insert_Data_After(ListHead);
+            break;
+        case 4:
+            Delete_Data_From_Beginning(&ListHead);
+            break;
+        case 5:
+            Delete_Data_From_End(&ListHead);
+            break;
+        case 6:
+            Delete_Data(ListHead);
+            break;
+        case 7:
+            Display_Data(ListHead);
+            break;
+        case 8:
+            ListLength = Get_Lenght(ListHead);
+            printf("List Length : << %i >> Nodes\n", ListLength);
+            break;
+        case 9:
+            printf("Quit from application \n");
+            exit(1);
+            break;
+        default:
+            printf("User Choice out of range !!\n");
+            break;
+        }
+    }
+    return 0;
 }
