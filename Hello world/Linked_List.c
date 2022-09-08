@@ -23,7 +23,7 @@ void Insert_Data_At_Beginning(struct Node** List)
 			*List = TempNode;
 		}
 	}
-};
+}
 
 // insert data at end of linked list
 void Insert_Data_At_End(struct Node** List) 
@@ -47,30 +47,30 @@ void Insert_Data_At_End(struct Node** List)
 	}
 
 
-};
+}
 
 
 
 // Get Lenght of Our Linked List
-int Get_Lenght(struct Node** List)
+int Get_Lenght(struct Node* List)
 {
 	struct Node* FirstNode = NULL;
 	int len = 0;
-	if (*List != NULL)
+	if (List != NULL)
 	{
-		FirstNode = *List;
-		while (FirstNode->NodeLink != NULL)
+		FirstNode = List;
+		while (FirstNode != NULL)
 		{
 			FirstNode = FirstNode->NodeLink;
 			len++;
 		}
 	}
 	return len;
-};
+}
 
 
 // insert data after specific element at linked list
-void Insert_Data_After(struct Node** List)
+void Insert_Data_After(struct Node* List)
 {
 	struct Node* TempNode = NULL, * CounterList = NULL;
 	int position = 0, counter = 1, len = Get_Lenght(List);
@@ -79,7 +79,7 @@ void Insert_Data_After(struct Node** List)
 	if (position > len || position < 1) printf("Your position is Invalid");
 	else
 	{
-		CounterList = *List;
+		CounterList = List;
 		while (counter != position) 
 		{
 			counter++;
@@ -95,4 +95,93 @@ void Insert_Data_After(struct Node** List)
 		}
 	}
 
-};
+}
+
+
+
+
+// Delete data at beginning of linked list
+void Delete_Data_From_Beginning(struct Node** List)
+{
+	struct Node* TempNode = *List;
+	int len = Get_Lenght(*List);
+	if (len == 0) printf("Linked list is empty!!");
+	else
+	{
+		*List = TempNode->NodeLink;
+		TempNode->NodeLink = NULL;
+		free(TempNode);
+	}
+}
+
+
+
+// Delete data at end of linked list
+void Delete_Data_From_End(struct Node** List)
+{
+	struct Node* LastNode = NULL, * Counter = NULL;
+	int len = Get_Lenght(*List), counter = 1;
+	if (len == 0) printf("Linked list is empty!!");
+	else
+	{
+		Counter = *List;
+		while (counter != (len - 1))
+		{
+			counter++;
+			Counter = Counter->NodeLink;
+		}
+		LastNode = Counter->NodeLink;
+		Counter->NodeLink = NULL;
+		free(LastNode);
+	}
+
+}
+
+
+
+
+// Delete data after specific element at linked list
+void Delete_Data(struct Node* List)
+{
+	struct Node* TempNode = NULL, * CounterList = NULL;
+	int position = 0, counter = 1, len = Get_Lenght(List);
+	printf("Enter Position you want to Delete it(Enter Positive num) : \n '(For knowing, the first position is 1)'");
+	scanf_s("%i", &position);
+	if (position > len || position <= 1) printf("Your position is Invalid ------> Use delete from beginning");
+	else
+	{
+		CounterList = List;
+		while(counter != (len - 1))
+		{
+			counter++;
+			CounterList = CounterList->NodeLink;
+		}
+		TempNode = CounterList->NodeLink;
+		CounterList->NodeLink = TempNode->NodeLink;
+		TempNode->NodeLink = NULL;
+		free(TempNode);
+	}
+
+
+}
+
+
+
+
+// Display data of linked list
+void Display_Data(struct Node* List)
+{
+	struct Node* TempNode = List;
+	int len = Get_Lenght(List);
+	if (len == 0) printf("Linked List is empty!!!");
+	else
+	{
+		while(TempNode != NULL)
+		{
+			printf("Node Data -> ", TempNode->NodaData);
+			TempNode = TempNode->NodeLink;
+		}
+		printf("Done Display of all data");
+	}
+
+}

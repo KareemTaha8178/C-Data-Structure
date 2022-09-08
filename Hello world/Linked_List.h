@@ -21,12 +21,30 @@ void Insert_Data_At_Beginning(struct Node** List);
 void Insert_Data_At_End(struct Node** List);
 
 // Get Lenght of Our Linked List
-int Get_Lenght(struct Node** List);
+int Get_Lenght(struct Node* List);
 
 
 
 // insert data after specific element at linked list
-void Insert_Data_After(struct Node** List);
+void Insert_Data_After(struct Node* List);
+
+
+// Delete data at beginning of linked list
+void Delete_Data_From_Beginning(struct Node** List);
+
+// Delete data at end of linked list
+void Delete_Data_From_End(struct Node** List);
+
+
+
+// Delete data after specific element at linked list
+void Delete_Data(struct Node* List);
+
+
+
+
+// Display data of linked list
+void Display_Data(struct Node* List);
 
 
 #endif //  !_LINKED_LIST_H_
