@@ -21,7 +21,7 @@
     <ClCompile Include="Stack.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Dunamic_Stack.c">
+    <ClCompile Include="Linked_List.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +32,10 @@
     <ClInclude Include="Stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dynamic_Stack.h">
+    <ClInclude Include="Linked_List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data_Type_Linked_List.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

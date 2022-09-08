@@ -3,6 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include "Stack.h"
+#include "Linked_List.h"
 
 
 typedef long long ll;
@@ -16,10 +17,11 @@ typedef long long ll;
 //const double Prox = 1e-7;
 
 Stack_ds_t MyStack_1;
+struct Node Linked_1;
 
 int main() {
 
-	return_State_t ret;
+	/*return_State_t ret;
 	ret = Stack_init(&MyStack_1);
 	if (ret == OK)
 	{
@@ -43,6 +45,9 @@ int main() {
 		printf("%d \n", siz2);
 
 	}
-	else puts("You have a problem with stack initialization");
+	else puts("You have a problem with stack initialization");*/
+	
+
+
 	return 0;
 }
