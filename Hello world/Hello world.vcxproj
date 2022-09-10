@@ -129,11 +129,13 @@
   <ItemGroup>
     <ClCompile Include="Linked_List.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="Double_L_L.cpp" />
     <ClCompile Include="Stack.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_Types_Stack.h" />
     <ClInclude Include="Data_Type_Linked_List.h" />
+    <ClInclude Include="Double_Linked_List1.h" />
     <ClInclude Include="Linked_List.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>

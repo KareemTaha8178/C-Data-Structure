@@ -3,9 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include "Stack.h"
-#include "Linked_List.h"
-
-
+#include "Double_Linked_List1.h"
 typedef long long ll;
 
 #define PI 3.14
@@ -17,7 +15,7 @@ typedef long long ll;
 //const double Prox = 1e-7;
 
 Stack_ds_t MyStack_1;
-struct Node *ListHead = NULL;
+struct DNode* ListHead = NULL;
 
 int main() {
 
@@ -46,10 +44,13 @@ int main() {
 
 	}
 	else puts("You have a problem with stack initialization");*/
+
+
+
     int UserChoice = 0;
     int ListLength = 0;
 
-    printf("-> Hello to Single Linked List \n");
+    printf("-> Hello to Double Linked List \n");
     while (1) {
         printf("\n");
         printf("===============================\n");
@@ -76,13 +77,13 @@ int main() {
             Insert_Data_At_End(&ListHead);
             break;
         case 3:
-            Insert_Data_After(ListHead);
+            Insert_Data_At_Any_Position(ListHead);
             break;
         case 4:
             Delete_Data_From_Beginning(&ListHead);
             break;
         case 5:
-            Delete_Data_From_End(&ListHead);
+            Delete_Data_From_End(ListHead);
             break;
         case 6:
             Delete_Data(ListHead);
@@ -103,5 +104,9 @@ int main() {
             break;
         }
     }
+
+
+
+
     return 0;
 }

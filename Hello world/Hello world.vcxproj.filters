@@ -24,6 +24,9 @@
     <ClCompile Include="Linked_List.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Double_L_L.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_Types_Stack.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Data_Type_Linked_List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Double_Linked_List1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
